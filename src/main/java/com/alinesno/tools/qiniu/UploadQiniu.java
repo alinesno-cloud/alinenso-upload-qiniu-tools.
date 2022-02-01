@@ -3,6 +3,8 @@ package com.alinesno.tools.qiniu;
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import com.alinesno.tools.qiniu.data.QiniuStoreHandler;
 
 /**
@@ -14,6 +16,8 @@ import com.alinesno.tools.qiniu.data.QiniuStoreHandler;
 public class UploadQiniu {
 
 	public static void main(String[] args) {
+		
+		System.out.println("参数为:" + ToStringBuilder.reflectionToString(args));
 
 		String accessKey = args[0] ; 
 		String secretKey = args[1] ; 
