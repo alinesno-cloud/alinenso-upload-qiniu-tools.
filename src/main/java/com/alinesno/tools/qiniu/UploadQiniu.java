@@ -21,8 +21,9 @@ public class UploadQiniu {
 		String domain = args[3] ; 
 		String localFolder = args[4] ; 
 		String remoteFolder = args[5] ; 
-		boolean overrideUpload = true ; 
-		boolean refresh = true ; 
+		
+		boolean overrideUpload =  args[6]==null?true:Boolean.parseBoolean(args[7]) ; 
+		boolean refresh = args[7]==null?true:Boolean.parseBoolean(args[7]) ; 
 
 		QiniuStoreHandler qiniuStoreHandler = new QiniuStoreHandler(accessKey, secretKey, spaceBucket);
 		qiniuStoreHandler.setOverrideUpload(overrideUpload);
